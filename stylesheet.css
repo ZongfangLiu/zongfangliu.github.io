@@ -1,0 +1,312 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #2b2b2b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+a {
+  color: #1c4f95;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus-visible {
+  text-decoration: underline;
+}
+
+code {
+  font-family: Menlo, Consolas, monospace;
+  font-size: 0.92em;
+}
+
+.topbar {
+  border-bottom: 1px solid #ececec;
+}
+
+.top-nav {
+  width: min(1140px, calc(100% - 40px));
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 42px;
+  padding: 22px 0 22px calc(260px + 48px);
+  font-size: 1rem;
+}
+
+.top-nav a {
+  color: #7a7a7a;
+  font-weight: 600;
+}
+
+.top-nav a:hover,
+.top-nav a:focus-visible {
+  color: #4f4f4f;
+  text-decoration: none;
+}
+
+.page {
+  width: min(1140px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 26px 0 42px;
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 48px;
+}
+
+.sidebar {
+  padding-top: 26px;
+}
+
+.portrait-frame {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 4px solid #f5f5f5;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.portrait {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sidebar h1 {
+  margin: 18px 0 6px;
+  text-align: center;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #404040;
+}
+
+.sidebar-role {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: #666666;
+  font-size: 0.9rem;
+  letter-spacing: 0.03em;
+}
+
+.anchor-target {
+  position: relative;
+  top: -18px;
+  height: 0;
+}
+
+.profile-links {
+  width: fit-content;
+  margin: 20px auto 0;
+  display: grid;
+  gap: 14px;
+}
+
+.profile-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #444444;
+  font-size: 0.98rem;
+}
+
+.profile-links svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
+.content {
+  min-width: 0;
+}
+
+.section {
+  padding: 0 0 26px;
+}
+
+.section h2 {
+  margin: 0 0 14px;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #404040;
+}
+
+.section p {
+  margin: 0 0 14px;
+}
+
+.section-note {
+  color: #666666;
+  margin-bottom: 18px;
+}
+
+.symbols-note {
+  margin-top: -8px;
+  font-size: 0.94rem;
+}
+
+.publication-list {
+  display: grid;
+  gap: 14px;
+}
+
+.publication {
+  padding-bottom: 0;
+}
+
+.paper-body h3 {
+  margin: 0 0 4px;
+  font-size: 1.04rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.paper-body p {
+  margin: 0 0 6px;
+}
+
+.paper-authors,
+.paper-note,
+.paper-meta {
+  color: #666666;
+}
+
+.paper-authors sup,
+.symbols-note sup {
+  font-size: 0.9em;
+  line-height: 0;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.18em;
+}
+
+.note-symbol {
+  font-size: 1.02em;
+  font-weight: 600;
+  position: relative;
+  top: -0.18em;
+}
+
+.paper-venue {
+  color: #666666;
+  white-space: nowrap;
+}
+
+.photo-marquee {
+  position: relative;
+  overflow: hidden;
+  padding: 8px 0;
+  margin-top: 14px;
+}
+
+.photo-track {
+  display: flex;
+  gap: 18px;
+  width: max-content;
+  animation: photo-scroll 42s linear infinite;
+}
+
+.photo-loading {
+  color: #666666;
+  margin: 0;
+}
+
+.photo-marquee:hover .photo-track {
+  animation-play-state: paused;
+}
+
+.photo-card {
+  flex: 0 0 240px;
+  width: 240px;
+  margin: 0;
+  border: 1px solid #ececec;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fafafa;
+  box-shadow: 0 6px 18px rgba(20, 35, 60, 0.06);
+}
+
+.photo-card img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.photo-card figcaption {
+  padding: 10px 12px;
+  font-size: 0.92rem;
+  color: #666666;
+}
+
+.visitor-section {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.visitor-widget-simple {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.visitor-widget-simple #mapmyvisitors-widget {
+  margin: 0 auto !important;
+}
+
+.visitor-widget-simple .mapmyvisitors-date {
+  display: none !important;
+}
+
+.site-footer {
+  padding: 10px 0 0;
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  color: #8a8a8a;
+  font-size: 0.9rem;
+}
+
+@keyframes photo-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 9px));
+  }
+}
+
+@media (max-width: 900px) {
+  .top-nav {
+    gap: 22px;
+    padding-left: 0;
+  }
+
+  .page {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .sidebar {
+    padding-top: 0;
+  }
+}
