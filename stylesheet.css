@@ -165,6 +165,78 @@ code {
   gap: 14px;
 }
 
+.experience-list {
+  display: grid;
+  gap: 28px;
+}
+
+.experience {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.experience-logo {
+  display: block;
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  flex: 0 0 56px;
+  margin-top: 2px;
+}
+
+.experience-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "title date"
+    "subtitle subtitle";
+  column-gap: 18px;
+  row-gap: 4px;
+  min-width: 0;
+  flex: 1;
+}
+
+.experience-title {
+  grid-area: title;
+  margin: 0;
+  color: #2b2b2b;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  min-width: 0;
+}
+
+.experience-date {
+  grid-area: date;
+  margin: 0;
+  white-space: nowrap;
+  color: #2b2b2b;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-style: normal;
+  text-align: right;
+  align-self: start;
+}
+
+.experience-subtitle {
+  grid-area: subtitle;
+  margin: 0;
+  color: #2b2b2b;
+  font-size: 1rem;
+  line-height: 1.2;
+  min-width: 0;
+}
+
+.experience-subtitle em {
+  font-style: normal;
+}
+
+.experience-subtitle strong {
+  color: inherit;
+  font-weight: 700;
+}
+
 .publication {
   padding-bottom: 0;
 }
@@ -257,6 +329,31 @@ code {
 .visitor-section {
   padding-top: 10px;
   text-align: center;
+}
+
+@media (max-width: 780px) {
+  .experience {
+    gap: 12px;
+  }
+
+  .experience-logo {
+    width: 52px;
+    height: 52px;
+    flex-basis: 52px;
+  }
+
+  .experience-body {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "date"
+      "subtitle";
+  }
+
+  .experience-date {
+    text-align: left;
+    white-space: normal;
+  }
 }
 
 .visitor-widget-simple {
